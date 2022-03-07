@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panaderia Espacial</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Estilo de header */
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        /* Crear 2 columnas con la misma posición en la fila */
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px;
+            /* only for demonstration, should be removed */
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 800px;
+        }
+
+        /* Clear floats after the columns */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Estilo de footer */
+        footer {
+            background-color: #777;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>Panaderia Espacial</h2>
+        <img src="./img/logo.PNG" alt="Logo" width="400px" height="300px">
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <hr>
+                <!-- Tipos de Inputs -->
+                <h2>Pedido</h2>
+                <label for="Input1"> Nombre </label>
+                <br>
+                <input type="text" id="Input1" name="Input1"> <br>
+
+                <label for="correo1"> Correo  electronico</label><br>
+                <input type="email" id="correo1" name="correo1"><br><br>
+                               
+                <label for="tel1"> Telefono </label><br>
+                <input type="tel" id="tel1" name="tel1" maxlength="10"><br><br>
+                
+                <label for="text"> Descripcion del pedido</label><br>
+                <input type="text" id="input2" name="input2"><br><br>
+            
+
+                <hr>
+
+                <h2>Agregar adornos</h2><br>
+                <input type="checkbox" id="topping1" name="topping1" value="Cebolla">
+                <label for="topping1">Figuras Comestible</label><br>
+                <input type="checkbox" id="topping2" name="topping2" value="Cilantro">
+                <label for="topping2">Velas comestibles</label><br>
+                <input type="checkbox" id="topping3" name="topping3" value="Salsa">
+                <label for="topping3">Toppigs extras</label><br><br>
+
+                <h2>Selecciona el topping</h2>
+                <label for="refresco">toppings disponibles</label><br>
+                <input list="refresco">
+                <datalist id="refresco">
+                    <option value="dulces">
+                    <option value="Manzana">
+                    <option value="Naranja">
+                    <option value="Mango">
+                    <option value="Guayaba">
+                </datalist>
+                <br><br>
+            
+                <hr>
+                <hr>
+    
+                <h2>Proceder con la orden</h2>
+                <input type="reset"><br>
+                <input type="submit"><br>
+                <input type="button" id="boton1" name="boton1" value="Botón 1" onclick="alert('Bienvenidos explorers');"><br><br>
+                
+                <hr>
+                
+                <hr>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>Bienvenidos a la pasteleria con sobares fuera de este mundo</h1>
+
+            <h2>Menu de la pasteleria </h2>
+            
+            <dl>
+                <dt>Chocogalactico----------------------------------450 </dt>
+                <dd>- Delicioso sabor chocolate especialidad del lugar</dd>
+                <dt>La Fresa-----------------------------------------400</dt>
+                <dd>- Delicioso Pastel de fresa con fruta natural</dd>
+                <dt>Mangoloso----------------------------------------420</dt>
+                <dd>- Delicioso Pastel de Mango con fruta fresca</dd>
+                <dt>Cafetero-----------------------------------------450</dt>
+                <dd>- Delicioso Pastel de cafe y mocca</dd>
+                <dt>Limonoso espacial-------------------------------400</dt>
+                <dd>- Delicioso Pastel de Limon de temporada</dd>
+                <dt>Pastel Cubano-----------------------------------550</dt>
+                <dd>- Delicioso Pastel personalizado con hasta 3 sabores diferentes a eleccion</dd>
+            </dl>
+
+            <h2>Menu de Adornos</h2>
+            <dl>
+                <dt>Figuras comestibles detalladas-------------------400 </dt>
+                <dd>- 1 a 3 figuras detalladas que se pueden incluir en tu pastel</dd>
+                <dt>Velas personalizadas----------------------------100</dt>
+                <dd>- vela personalizada hechas artesalmente </dd>
+                <dt>Toppics-----------------------------------------220</dt>
+                <dd>- Gran variedad de toppinc que puedes agregar, preguntar por la lista</dd>
+               
+       
+            </dl>
+
+        </article>
+    </section>
+
+    <footer>
+        <p>Allende, Delegacion Gustavo A. Madero <br>Tel: 5142478 <br>Horario: 9 a 6 de Lunes a Viernes </p>
+    </footer>
+
+</body>
+
+</html>
